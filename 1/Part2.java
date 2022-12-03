@@ -10,9 +10,10 @@ public class Part2 {
     int tempCalories = 0;
     ArrayList<Integer> calorieSumList = new ArrayList<>();
 
-    try (BufferedReader reader = new BufferedReader(new FileReader("src/input.txt"))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader("1/input.txt"))) {
       while ((line = reader.readLine()) != null) {
-        if (!line.isEmpty()) tempCalories += Integer.parseInt(line);
+        if (!line.isEmpty())
+          tempCalories += Integer.parseInt(line);
         else {
           calorieSumList.add(tempCalories);
           tempCalories = 0;

@@ -8,12 +8,13 @@ public class Part1 {
     int tempCalories = 0;
     Integer mostCalories = 0;
 
-    try (BufferedReader reader = new BufferedReader(new FileReader("src/input.txt"))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader("1/input.txt"))) {
       while ((line = reader.readLine()) != null) {
         if (!line.isEmpty()) {
           tempCalories += Integer.parseInt(line);
         } else {
-          if (tempCalories > mostCalories) mostCalories = tempCalories;
+          if (tempCalories > mostCalories)
+            mostCalories = tempCalories;
           tempCalories = 0;
         }
       }
