@@ -14,6 +14,7 @@ with open("input.txt") as file:
                 if char.isalpha():
                     # adds crate to the bottom of its respective stack
                     crates[(index+1)//4].insert(0, char)
+        # Select lines that include commands
         if line.startswith("m"):
             commands = ([int(s) for s in line.split() if s.isdigit()])
             num_to_move = commands[0]
