@@ -1,6 +1,5 @@
 crates = []
 
-# Takes crates off the top of a stack in blocks and adds to another
 with open("input.txt") as file:
     for line in file:
         # Select lines that include crates
@@ -21,6 +20,7 @@ with open("input.txt") as file:
             source = crates[commands[1]-1]
             destination = crates[commands[2]-1]
 
+            # Takes crates off the top of a stack in blocks and adds to another
             for i in range(num_to_move):
                 destination.append(source.pop())
 
